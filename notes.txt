@@ -12,3 +12,18 @@
     Requirements
         jq
             sudo apt-get install -y jq
+
+    Create vps
+        window.location.replace("/servers/add/");
+
+        console.log("start creating vps");
+        $('#dc_tmp').val(3); //
+        $('#vps_title_tmp').val(""); //
+        $('#pay_period_tmp').val("1h"); //
+        $('#os_version').val(1); //
+        $('#pay_period_tmp').append('<p class="virtual-os-version-list_item active">Test</p>');
+        $('.virtual-os-version-list_item.active').data('id', 221); // 221
+        $('.tarif-box.active').parent().attr('id', 1);
+        $('#answer-task').prop('checked', true);
+        prepare_add_server();
+        console.log("end creating vps");
