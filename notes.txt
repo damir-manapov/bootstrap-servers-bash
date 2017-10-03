@@ -1,0 +1,10 @@
+
+    install docker
+    ssh -o StrictHostKeyChecking=no root@85.143.174.148
+    curl -fsSL get.docker.com -o get-docker.sh && sudo sh get-docker.sh
+    docker run --rm -it ubuntu /bin/bash
+
+    install docker
+    ssh -o StrictHostKeyChecking=no root@89.223.27.182 "curl -fsSL get.docker.com -o get-docker.sh && sudo sh get-docker.sh"
+    ssh -o StrictHostKeyChecking=no root@89.223.27.182 "echo main-machine-hostname: $(hostname)"
+    ssh -o StrictHostKeyChecking=no root@89.223.27.182 "echo docker-machine-hostname: $(docker run --rm ubuntu hostname)"

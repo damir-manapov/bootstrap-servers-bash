@@ -3,6 +3,8 @@ target/
 *.log
 app.log.*
 
+secret-init.sh
+
 ### IntelliJ IDEA ###
 .idea
 *.iws
