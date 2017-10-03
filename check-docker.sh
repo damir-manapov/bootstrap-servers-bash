@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
-while read p; do
+hosts=($(sh get-ips.sh))
 
-    echo $p
-    ssh -o StrictHostKeyChecking=no root@$p "echo main-machine-hostname: $(hostname)" < /dev/null
-    ssh -o StrictHostKeyChecking=no root@$p "echo docker-machine-hostname: $(docker run --rm ubuntu hostname)" < /dev/null
-
-done < ips.txt
+for host in ${hosts[*]}
+do
+    echo "checking for host: ${host}"
+    ssh -o StrictHostKeyChecking=no root@$host "echo main-machine-hostname: $(hostname)" < /dev/null
+    ssh -o StrictHostKeyChecking=no root@$host "echo docker-machine-hostname: $(docker run --rm ubuntu hostname)" < /dev/null
+done
