@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-hosts=($(sh get-ips.sh))
+hosts=($(sh $(dirname "$0")/get-ips.sh))
 
 for host in ${hosts[*]}
 do

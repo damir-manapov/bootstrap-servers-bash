@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-vpses=($(sh get-vpsids.sh))
+vpses=($(sh $(dirname "$0")/get-vpsids.sh))
 
 for vps in ${vpses[*]}
 do
