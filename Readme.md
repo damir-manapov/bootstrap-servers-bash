@@ -22,3 +22,19 @@
     $('#answer-task').prop('checked', true);
     prepare_add_server();
     console.log("end creating vps");
+    
+#### Steps
+* Init your simplecloud.ru secret
+    * ```export TOKEN=YOUR_TOKEN```
+* Add your ssh key to simplecloud.ru that will be added to al created servers
+* Create a few servers via UI or as mentioned above (you should prove you identity to be able to create more than 4 vps)
+* Install docker on servers
+    * commands/provisioning/install-docker.sh
+* Check that docker works on all servers if wanted to
+    * commands/provisioning/check-docker.sh
+* Run service on all servers
+    * commands/provisioning/run-docker-service.sh
+* Gather logs of all services
+    * commands/provisioning/logs-docker-service.sh
+* Remove all servers
+    * commands/provisioning/rm-allvps.sh
