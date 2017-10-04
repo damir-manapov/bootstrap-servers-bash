@@ -26,8 +26,8 @@
 #### Steps
 * Init your simplecloud.ru secret
     * ```export TOKEN=YOUR_TOKEN```
-* Add your ssh key to simplecloud.ru that will be added to al created servers
-* Create a few servers via UI or as mentioned above (you should prove you identity to be able to create more than 4 vps)
+* Add your ssh key to simplecloud.ru that will be added to all created servers
+* Create a few servers via UI or as mentioned above (you should prove you identity to be able to create more than 3 vps)
 * Install docker on servers
     * commands/provisioning/install-docker.sh
 * Check that docker works on all servers if wanted to
